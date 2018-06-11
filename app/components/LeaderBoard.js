@@ -21,8 +21,10 @@ export default class LeaderBoard extends React.Component {
       <div>
         This is LeaderBoard
         <ul>
-          {this.state.players.map((player, index) => (
-            <li key={index}>{player.name}</li>
+          {this.state.players
+            .sort((a, b) => b.score - a.score)
+            .map((player, index) => (
+            <li key={index}>{player.name} {player.score}</li>
           ))}
         </ul>
       </div>
