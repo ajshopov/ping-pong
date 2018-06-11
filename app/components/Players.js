@@ -13,13 +13,18 @@ export default class Players extends React.Component {
     }
   }
 
+  componentDidMount(){
+    fetch('http://localhost:5000/api/players')
+      .then(res => res.json())
+      .then(res => this.setState({ players: res }))
+  }
+
   onInputChange(event){
     this.setState({
       content: event.target.value
     })
     console.log(this.state.content)
   }
-
 
   getData(event) {
     fetch('http://localhost:5000/api/players', {
@@ -35,11 +40,7 @@ export default class Players extends React.Component {
       }))
   }
 
-  componentDidMount(){
-    fetch('http://localhost:5000/api/players')
-      .then(res => res.json())
-      .then(res => this.setState({ players: res }))
-  }
+
 
   render() {
     const {content, players} = this.state
