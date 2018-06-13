@@ -5,7 +5,7 @@ export default class LeaderBoard extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      players: []
+      players: [],
     }
   }
 
@@ -19,7 +19,7 @@ export default class LeaderBoard extends React.Component {
   render() {
     return (
       <div>
-        This is LeaderBoard
+        <h2>This is LeaderBoard</h2>
         <ul>
           {this.state.players.map((player, index) => (
             <li key={index}>{player.name}</li>
