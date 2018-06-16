@@ -22,9 +22,9 @@ export default class LeaderBoard extends React.Component {
         <h2>This is LeaderBoard</h2>
         <ul>
           {this.state.players
-            .sort((a, b) => b.score - a.score)
+            .sort((a, b) => b.points - a.points)
             .map((player, index) => (
-            <li key={index}>{player.name} {player.score}</li>
+            <li key={index}>{player.name} {player.points}</li>
           ))}
         </ul>
       </div>
