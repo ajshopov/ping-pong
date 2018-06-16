@@ -4,6 +4,7 @@ import React from 'react'
 // import PlayerList from './PlayerList'
 import LeaderBoard from './LeaderBoard';
 import Matches from './Matches';
+import AddGame from './AddGame';
 
 export default class App extends React.Component {
 
@@ -19,6 +20,7 @@ export default class App extends React.Component {
         <h1>Ping Pong</h1>
         <LeaderBoard />
         <Matches />
+        <AddGame />
       </div>
     )
   }
